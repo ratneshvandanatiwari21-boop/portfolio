@@ -1,0 +1,303 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ratnesh Tiwari | Data Science Portfolio</title>
+    <meta name="description" content="Portfolio of Ratnesh Tiwari, a data science and analytics fresher skilled in Python, SQL, machine learning, Power BI, and Django." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'css/static.css' %}" />
+  </head>
+  <body>
+    <section class="hero" id="home">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="{% static 'images/bg-vedio.mp4' %}" type="video/mp4" />
+      </video>
+
+      <nav class="navbar" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Ratnesh Tiwari home">
+          <span class="brand-mark">RT</span>
+          <span>Ratnesh Tiwari <small>Data Science/Full Stack Developer</small></span>
+        </a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+        <label class="menu-button" for="nav-toggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></label>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="hero-kicker">
+            <i class="fa-solid fa-chart-line"></i> Python, SQL, ML, Power BI
+          </p>
+          <h1>Turning raw data into <span>clear decisions.</span></h1>
+          <p class="hero-text">I am a final-year B.Tech IT student focused on data science, analytics, machine learning, and dashboard development. I build clean datasets, predictive models, and simple reporting experiences that help teams understand what to do next.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-arrow-right"></i> View Projects</a>
+            <a class="btn btn-secondary" href="{% static 'files/Ratnesh CV.pdf' %}" download><i class="fa-solid fa-download"></i> Download CV</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="profile-frame">
+            <img src="{% static 'images/profile.png' %}" alt="Ratnesh Tiwari profile photo" />
+          </div>
+          <div class="quick-stats" aria-label="Portfolio highlights">
+            <div class="stat">
+              <strong>6+</strong>
+              <span>Core Data Tools</span>
+            </div>
+            <div class="stat">
+              <strong>5+</strong>
+              <span>Projects Completed</span>
+            </div>
+            <div class="stat">
+              <strong>400+</strong>
+              <span>Volunteers Coordinated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-grid">
+        <div class="about-photo">
+          <video autoplay muted loop playsinline>
+            <source src="{% static 'images/front video.mp4' %}" type="video/mp4" />Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">About Me</p>
+            <h2>Data Science Fresher with Practical Project Experience.</h2>
+            <p class="lead">I work with Python, SQL, Pandas, NumPy, Scikit-learn, Excel, and Power BI to clean data, find patterns, build models, and present insights. My current focus is entry-level Data Analyst, Data Science, and Machine Learning roles.</p>
+          </div>
+          <div class="about-points">
+            <div class="about-point">
+              <i class="fa-solid fa-code"></i>
+              <p>Comfortable with data cleaning, preprocessing, feature selection, visualization, and reporting.</p>
+            </div>
+            <div class="about-point">
+              <i class="fa-solid fa-brain"></i>
+              <p>Built regression and prediction workflows using Python and Scikit-learn.</p>
+            </div>
+            <div class="about-point">
+              <i class="fa-solid fa-chart-simple"></i>
+              <p>Created dashboards and reports in Power BI and Excel to communicate insights.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+      <div class="section-head">
+        <p class="eyebrow">Technical Skills</p>
+        <h2>Tools I use to Analyze, Model and Present Data.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-python"></i>
+          <h3>Python</h3>
+          <p>Pandas, NumPy, Preprocessing, Analysis, Automation and Model Workflows.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <h3>SQL & Databases</h3>
+          <p>MySQL, SQLite, MongoDB, DBMS concepts, Queries, and Structured Data Handling.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-chart-column"></i>
+          <h3>BI & Visualization</h3>
+          <p>Power BI, Excel, Matplotlib, Seaborn, Dashboards, Reporting, and Insight Summaries.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-gears"></i>
+          <h3>Machine Learning</h3>
+          <p>Scikit-learn, Regression, Feature Selection, Model Evaluation, and Tuning .</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Web Development</h3>
+          <p>Django, HTML, CSS, JavaScript, Backend logic, CRUD Workflows, and Responsive pages.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-git-alt"></i>
+          <h3>Developer Tools</h3>
+          <p>Git, GitHub, VS Code, Jupyter Notebook and Project Documentation.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Core CS</h3>
+          <p>Data Structures, Algorithms, Operating Systems, Computer Networks, AI, and DBMS.</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-file-lines"></i>
+          <h3>Reporting</h3>
+          <p>Data validation, Dashboard storytelling, Final reporting, and Stakeholder-ready summaries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="section-head">
+        <p class="eyebrow">Experience</p>
+        <h2>Hands-on Data Work.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>Data Science Intern | SoftPro India</h3>
+          <span>Nov 2025 - Jun 2026</span>
+          <ul>
+            <li>Analyzed and preprocessed datasets using Python, Pandas, NumPy, Excel, and Matplotlib.</li>
+            <li>Built basic machine learning models for prediction tasks and evaluated model performance.</li>
+            <li>Created interactive dashboards and reports using Power BI to communicate trends and insights.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section" id="projects">
+      <div class="section-head">
+        <p class="eyebrow">Featured Projects</p>
+        <h2>Selected work built around real portfolio goals.</h2>
+        <p class="lead">Each project focuses on clear functionality, data handling, and practical implementation.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">01</span>
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <h3>Employee Management System</h3>
+          <p>Django-based employee management app with CRUD operations, SQLite storage, Django ORM, and responsive frontend screens.</p>
+          <div class="tag-list">
+            <span>Django</span>
+            <span>SQLite</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </article>
+        <a href="https://github.com/ratneshvandanatiwari21-boop/Sales_prediction" target="_blank">
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number">02</span>
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3>Sales Data Analysis</h3>
+            <p>Python regression workflow for sales forecasting with preprocessing, feature selection, model tuning, and R2-score evaluation.</p>
+            <div class="tag-list">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Scikit-learn</span>
+              <span>ML</span>
+            </div>
+          </article>
+        </a>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">03</span>
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h3>Analytics Dashboard</h3>
+          <p>Dashboard concept using Power BI, Excel, and SQL-style thinking to summarize trends and support business decisions.</p>
+          <div class="tag-list">
+            <span>Power BI</span>
+            <span>Excel</span>
+            <span>SQL</span>
+            <span>Reporting</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-grid">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2>Have a role, project, or collaboration?</h2>
+            <p class="lead">Send a message from the form. It will be saved in the Django admin so you can review every enquiry.</p>
+          </div>
+          <div class="contact-details">
+            <a class="contact-detail" href="mailto:ratneshvandanatiwari21@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>ratneshvandanatiwari21@gmail.com</span>
+            </a>
+            <a class="contact-detail" href="tel:+919336935310">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 9336935310</span>
+            </a>
+            <div class="contact-detail">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Ayodhya, Uttar Pradesh</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          {% if messages %}
+            <div class="messages">
+              {% for message in messages %}
+                <div class="message {{ message.tags }}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <form class="form-grid" method="post" action="#contact">
+            {% csrf_token %}
+            <div class="form-row">
+              <label>Name<input type="text" name="name" placeholder="Your name" value="{{ form_values.name|default:'' }}" required /></label>
+              <label>Email<input type="email" name="email" placeholder="you@example.com" value="{{ form_values.email|default:'' }}" required /></label>
+            </div>
+            <label>Subject<input type="text" name="subject" placeholder="What should we talk about?" value="{{ form_values.subject|default:'' }}" required /></label>
+            <label>Message<textarea name="message" rows="6" placeholder="Write your message here..." required>{{ form_values.message|default:'' }}</textarea></label>
+            <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Ratnesh Tiwari. Built with Django.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+    <script>
+      const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+      const revealItems = document.querySelectorAll('.section-head, .about-photo, .about-point, .skill-card, .timeline-item, .project-card, .contact-detail, .contact-card')
+      
+      revealItems.forEach((item) => item.classList.add('reveal'))
+      
+      if (motionQuery.matches || !('IntersectionObserver' in window)) {
+        revealItems.forEach((item) => item.classList.add('is-visible'))
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return
+              entry.target.classList.add('is-visible')
+              observer.unobserve(entry.target)
+            })
+          },
+          { threshold: 0.14 }
+        )
+      
+        revealItems.forEach((item) => revealObserver.observe(item))
+      }
+    </script>
+  </body>
+</html>
