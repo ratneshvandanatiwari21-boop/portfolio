@@ -25,7 +25,7 @@ SECRET_KEY = 'y0*yd_v2r1*7s3tcs-+q6n+*&-l9kn6r_47nx7_pl$pkc#(#9@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
