@@ -6,224 +6,449 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ratnesh Tiwari | Data Science Portfolio</title>
     <meta name="description" content="Portfolio of Ratnesh Tiwari, a data science and analytics fresher skilled in Python, SQL, machine learning, Power BI, and Django." />
+    <meta name="keywords" content="Ratnesh Tiwari, Data Science, Data Analyst, Machine Learning, Python, SQL, Power BI, Django Developer, Portfolio" />
+    <meta name="author" content="Ratnesh Tiwari" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0b1119" />
+    <link rel="canonical" href="https://your-domain-here.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ratnesh Tiwari | Data Science Portfolio" />
+    <meta property="og:description" content="Data science and analytics fresher skilled in Python, SQL, machine learning, Power BI, and Django." />
+    <meta property="og:image" content="{% static 'images/profile.png' %}" />
+    <meta property="og:url" content="https://your-domain-here.com/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ratnesh Tiwari | Data Science Portfolio" />
+    <meta name="twitter:description" content="Data science and analytics fresher skilled in Python, SQL, machine learning, Power BI, and Django." />
+    <meta name="twitter:image" content="{% static 'images/profile.png' %}" />
+
+    <link rel="icon" type="image/png" href="{% static 'images/logo1.png' %}" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="{% static 'css/static.css' %}" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ratnesh Tiwari",
+      "jobTitle": "Data Science / Full Stack Developer",
+      "email": "mailto:ratneshvandanatiwari21@gmail.com",
+      "telephone": "+91-9336935310",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ayodhya",
+        "addressRegion": "Uttar Pradesh",
+        "addressCountry": "IN"
+      },
+      "knowsAbout": ["Python", "SQL", "Machine Learning", "Power BI", "Django", "Data Analysis"]
+    }
+    </script>
+
+    <!-- Set the theme before first paint to avoid a light/dark flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme')
+          var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark')
+        }
+      })()
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
     <section class="hero" id="home">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video autoplay muted loop playsinline class="hero-video" poster="{% static 'images/profile.png' %}" aria-hidden="true">
         <source src="{% static 'images/bg-vedio.mp4' %}" type="video/mp4" />
       </video>
 
       <nav class="navbar" aria-label="Primary navigation">
         <a class="brand" href="#home" aria-label="Ratnesh Tiwari home">
-          <span class="brand-mark">RT</span>
+          <span class="brand-mark">
+            <div class="profile-frame">
+              <img src="{% static 'images/logo1.png' %}" alt="Ratnesh Tiwari logo" width="48" height="48" />
+            </div>
+          </span>
           <span>Ratnesh Tiwari <small>Data Science/Full Stack Developer</small></span>
         </a>
-        <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
-        <label class="menu-button" for="nav-toggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></label>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+
+        <div class="nav-right">
+          <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#process">Process</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark theme" aria-pressed="false">
+            <span class="knob"><i class="fa-solid fa-sun" aria-hidden="true"></i><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+          </button>
+
+          <label class="menu-button" for="nav-toggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></label>
         </div>
       </nav>
 
       <div class="hero-content">
         <div class="hero-copy">
-          <p class="hero-kicker">
-            <i class="fa-solid fa-chart-line"></i> Python, SQL, ML, Power BI
-          </p>
-          <h1>Turning raw data into <span>clear decisions.</span></h1>
+          <p class="availability-badge"><span class="dot" aria-hidden="true"></span> Open to Data Analyst & ML internship/full-time roles</p>
+          <p class="role-line">Right now, thinking like a: <span class="role-cycle" id="roleCycle">Data Analyst</span></p>
+          <h1>Turning raw data into clear decisions.</h1>
           <p class="hero-text">I am a final-year B.Tech IT student focused on data science, analytics, machine learning, and dashboard development. I build clean datasets, predictive models, and simple reporting experiences that help teams understand what to do next.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-arrow-right"></i> View Projects</a>
-            <a class="btn btn-secondary" href="{% static 'files/Ratnesh CV.pdf' %}" download><i class="fa-solid fa-download"></i> Download CV</a>
+            <a class="btn btn-secondary" href="{% static 'files/Ratnesh CV.pdf' %}" download>
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
           </div>
         </div>
 
         <div class="hero-media">
           <div class="profile-frame">
-            <img src="{% static 'images/profile.png' %}" alt="Ratnesh Tiwari profile photo" />
+            <img src="{% static 'images/profile.png' %}" alt="Ratnesh Tiwari profile photo" width="320" height="320" />
           </div>
+
+          <canvas class="hero-chart" id="heroChart" role="img" aria-label="Illustrative scatter plot with a fitted regression line, representing data-driven prediction"></canvas>
+
           <div class="quick-stats" aria-label="Portfolio highlights">
             <div class="stat">
-              <strong>6+</strong>
+              <strong data-count="6" data-suffix="+">0</strong>
               <span>Core Data Tools</span>
             </div>
             <div class="stat">
-              <strong>5+</strong>
+              <strong data-count="5" data-suffix="+">0</strong>
               <span>Projects Completed</span>
             </div>
             <div class="stat">
-              <strong>400+</strong>
+              <strong data-count="400" data-suffix="+">0</strong>
               <span>Volunteers Coordinated</span>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
     </section>
 
-    <section class="about-section" id="about">
-      <div class="about-grid">
-        <div class="about-photo">
-          <video autoplay muted loop playsinline>
-            <source src="{% static 'images/front video.mp4' %}" type="video/mp4" />Your browser does not support the video tag.
-          </video>
-        </div>
-        <div>
-          <div class="section-head">
-            <p class="eyebrow">About Me</p>
-            <h2>Data Science Fresher with Practical Project Experience.</h2>
-            <p class="lead">I work with Python, SQL, Pandas, NumPy, Scikit-learn, Excel, and Power BI to clean data, find patterns, build models, and present insights. My current focus is entry-level Data Analyst, Data Science, and Machine Learning roles.</p>
+    <main id="main-content">
+      <section class="about-section" id="about">
+        <div class="about-grid">
+          <div class="about-photo">
+            <video autoplay muted loop playsinline aria-hidden="true">
+              <source src="{% static 'images/front video.mp4' %}" type="video/mp4" />
+            </video>
           </div>
-          <div class="about-points">
-            <div class="about-point">
-              <i class="fa-solid fa-code"></i>
-              <p>Comfortable with data cleaning, preprocessing, feature selection, visualization, and reporting.</p>
+          <div>
+            <div class="section-head">
+              <p class="eyebrow">About Me</p>
+              <h2>Data Science Fresher with Practical Project Experience.</h2>
+              <p class="lead">I work with Python, SQL, Pandas, NumPy, Scikit-learn, Excel, and Power BI to clean data, find patterns, build models, and present insights. My current focus is entry-level Data Analyst, Data Science, and Machine Learning roles — and I enjoy the last mile just as much as the modeling: turning a result into something a non-technical stakeholder can act on.</p>
             </div>
-            <div class="about-point">
-              <i class="fa-solid fa-brain"></i>
-              <p>Built regression and prediction workflows using Python and Scikit-learn.</p>
-            </div>
-            <div class="about-point">
-              <i class="fa-solid fa-chart-simple"></i>
-              <p>Created dashboards and reports in Power BI and Excel to communicate insights.</p>
+            <div class="about-points">
+              <div class="about-point">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                <p>Comfortable with data cleaning, preprocessing, feature selection, visualization, and reporting.</p>
+              </div>
+              <div class="about-point">
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                <p>Built regression and prediction workflows using Python and Scikit-learn.</p>
+              </div>
+              <div class="about-point">
+                <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+                <p>Created dashboards and reports in Power BI and Excel to communicate insights.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="skills-section" id="skills">
-      <div class="section-head">
-        <p class="eyebrow">Technical Skills</p>
-        <h2>Tools I use to Analyze, Model and Present Data.</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fa-brands fa-python"></i>
-          <h3>Python</h3>
-          <p>Pandas, NumPy, Preprocessing, Analysis, Automation and Model Workflows.</p>
+      <section class="skills-section" id="skills">
+        <div class="section-head">
+          <p class="eyebrow">Technical Skills</p>
+          <h2>Tools I use to Analyze, Model and Present Data.</h2>
         </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-database"></i>
-          <h3>SQL & Databases</h3>
-          <p>MySQL, SQLite, MongoDB, DBMS concepts, Queries, and Structured Data Handling.</p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-brands fa-python" aria-hidden="true"></i>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h3>Python</h3>
+            <p>Pandas, NumPy, Preprocessing, Analysis, Automation and Model Workflows.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-solid fa-database" aria-hidden="true"></i>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h3>SQL & Databases</h3>
+            <p>MySQL, SQLite, MongoDB, DBMS concepts, Queries, and Structured Data Handling.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h3>BI & Visualization</h3>
+            <p>Power BI, Excel, Matplotlib, Seaborn, Dashboards, Reporting, and Insight Summaries.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              <span class="skill-level">Working knowledge</span>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Scikit-learn, Regression, Feature Selection, Model Evaluation, and Tuning.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h3>Web Development</h3>
+            <p>Django, HTML, CSS, JavaScript, Backend logic, CRUD Workflows, and Responsive pages.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h3>Developer Tools</h3>
+            <p>Git, GitHub, VS Code, Jupyter Notebook and Project Documentation.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              <span class="skill-level">Working knowledge</span>
+            </div>
+            <h3>Core CS</h3>
+            <p>Data Structures, Algorithms, Operating Systems, Computer Networks, AI, and DBMS.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <h3>Reporting</h3>
+            <p>Data validation, Dashboard storytelling, Final reporting, and Stakeholder-ready summaries.</p>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-chart-column"></i>
-          <h3>BI & Visualization</h3>
-          <p>Power BI, Excel, Matplotlib, Seaborn, Dashboards, Reporting, and Insight Summaries.</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-gears"></i>
-          <h3>Machine Learning</h3>
-          <p>Scikit-learn, Regression, Feature Selection, Model Evaluation, and Tuning .</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-code"></i>
-          <h3>Web Development</h3>
-          <p>Django, HTML, CSS, JavaScript, Backend logic, CRUD Workflows, and Responsive pages.</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-git-alt"></i>
-          <h3>Developer Tools</h3>
-          <p>Git, GitHub, VS Code, Jupyter Notebook and Project Documentation.</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <h3>Core CS</h3>
-          <p>Data Structures, Algorithms, Operating Systems, Computer Networks, AI, and DBMS.</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-file-lines"></i>
-          <h3>Reporting</h3>
-          <p>Data validation, Dashboard storytelling, Final reporting, and Stakeholder-ready summaries.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="experience-section" id="experience">
-      <div class="section-head">
-        <p class="eyebrow">Experience</p>
-        <h2>Hands-on Data Work.</h2>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item">
-          <h3>Data Science Intern | SoftPro India</h3>
-          <span>Nov 2025 - Jun 2026</span>
-          <ul>
-            <li>Analyzed and preprocessed datasets using Python, Pandas, NumPy, Excel, and Matplotlib.</li>
-            <li>Built basic machine learning models for prediction tasks and evaluated model performance.</li>
-            <li>Created interactive dashboards and reports using Power BI to communicate trends and insights.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+      <section class="process-section" id="process">
+        <div class="section-head">
+          <p class="eyebrow">How I Work</p>
+          <h2>From a raw file to a decision someone can act on.</h2>
+          <p class="lead">The same four-step flow behind every project on this page.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step">
+            <h3>Understand</h3>
+            <p>Pin down the real question before touching data — what decision is this actually for?</p>
+          </div>
+          <div class="process-step">
+            <h3>Clean & Explore</h3>
+            <p>Handle missing values and outliers, then explore with Pandas, Matplotlib, and Seaborn.</p>
+          </div>
+          <div class="process-step">
+            <h3>Model</h3>
+            <p>Feature engineering, train/test splits, and Scikit-learn models, tuned and evaluated.</p>
+          </div>
+          <div class="process-step">
+            <h3>Communicate</h3>
+            <p>Package the result into a Power BI/Excel view and a plain-language summary.</p>
+          </div>
+        </div>
+      </section>
 
-    <section class="project-section" id="projects">
-      <div class="section-head">
-        <p class="eyebrow">Featured Projects</p>
-        <h2>Selected work built around real portfolio goals.</h2>
-        <p class="lead">Each project focuses on clear functionality, data handling, and practical implementation.</p>
-      </div>
-      <div class="projects-grid">
-        <a href="https://library-management-3yrc.onrender.com/" target="_blank">
-          <article class="project-card">
-            <div class="project-top">
-              <span class="project-number">01</span>
-              <i class="fa-solid fa-users-gear"></i>
-            </div>
-            <h3>AI-Powered Library Management System</h3>
-            <p>Django-based library management app with Recommendation Engine, CRUD operations, SQLite storage, Django ORM, and responsive frontend screens.</p>
-            <div class="tag-list">
-              <span>Django</span>
-              <span>SQLite</span>
-              <span>HTML</span>
-              <span>CSS</span>
-            </div>
+      <section class="experience-section" id="experience">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Hands-on Data Work.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Data Science Intern | SoftPro India</h3>
+            <span>Nov 2025 - Jun 2026</span>
+            <ul>
+              <li>Analyzed and preprocessed datasets using Python, Pandas, NumPy, Excel, and Matplotlib.</li>
+              <li>Built basic machine learning models for prediction tasks and evaluated model performance.</li>
+              <li>Created interactive dashboards and reports using Power BI to communicate trends and insights.</li>
+            </ul>
           </article>
-        </a>
-        <a href="https://github.com/ratneshvandanatiwari21-boop/Sales_prediction" target="_blank">
-          <article class="project-card">
-            <div class="project-top">
-              <span class="project-number">02</span>
-              <i class="fa-solid fa-chart-simple"></i>
+        </div>
+      </section>
+
+      <section class="project-section" id="projects">
+        <div class="section-head">
+          <p class="eyebrow">Featured Projects</p>
+          <h2>Selected work built around real portfolio goals.</h2>
+          <p class="lead">Each project focuses on clear functionality, data handling, and practical implementation.</p>
+        </div>
+
+        <div class="filter-tabs" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-tab active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-tab" type="button" data-filter="web" role="tab" aria-selected="false">Web Apps</button>
+          <button class="filter-tab" type="button" data-filter="ml" role="tab" aria-selected="false">Machine Learning</button>
+        </div>
+
+        <div class="projects-grid">
+          <a href="https://library-management-3yrc.onrender.com/" target="_blank" rel="noopener noreferrer" data-category="web" aria-label="Open AI-Powered Library Management System project (opens in new tab)">
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-number">01</span>
+                <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+              </div>
+              <h3>AI-Powered Library Management System</h3>
+              <p>Django-based library management app with Recommendation Engine, CRUD operations, SQLite storage, Django ORM, and responsive frontend screens.</p>
+              <div class="tag-list">
+                <span>Django</span>
+                <span>SQLite</span>
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+            </article>
+          </a>
+          <a href="https://github.com/ratneshvandanatiwari21-boop/Sales_prediction" target="_blank" rel="noopener noreferrer" data-category="ml" aria-label="Open Sales Data Analysis project on GitHub (opens in new tab)">
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-number">02</span>
+                <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+              </div>
+              <h3>Sales Data Analysis</h3>
+              <p>Python regression workflow for sales forecasting with preprocessing, feature selection, model tuning, and R2-score evaluation.</p>
+              <div class="tag-list">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Scikit-learn</span>
+                <span>ML</span>
+              </div>
+            </article>
+          </a>
+          <a href="https://github.com/ratneshvandanatiwari21-boop/disease_pred" target="_blank" rel="noopener noreferrer" data-category="ml" aria-label="Open Disease Prediction System project on GitHub (opens in new tab)">
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-number">03</span>
+                <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+              </div>
+              <h3>Disease Prediction System</h3>
+              <p>Predicts possible diseases from user symptoms using Machine Learning.</p>
+              <div class="tag-list">
+                <span>Python</span>
+                <span>ML</span>
+                <span>Streamlit</span>
+                <span>Scikit-learn</span>
+              </div>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <!-- TODO: replace these three placeholders with your real certifications
+           (name, issuing platform, year) before publishing — keep only genuine ones. -->
+      <section class="cert-section" id="certifications">
+        <div class="section-head">
+          <p class="eyebrow">Certifications</p>
+          <h2>Add your real credentials here.</h2>
+          <p class="lead">Swap these placeholder cards for certificates you've actually earned.</p>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <div>
+              <h3>Certification Title</h3>
+              <span>Issuing Platform · Year</span>
             </div>
-            <h3>Sales Data Analysis</h3>
-            <p>Python regression workflow for sales forecasting with preprocessing, feature selection, model tuning, and R2-score evaluation.</p>
-            <div class="tag-list">
-              <span>Python</span>
-              <span>Pandas</span>
-              <span>Scikit-learn</span>
-              <span>ML</span>
+          </div>
+          <div class="cert-card">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <div>
+              <h3>Certification Title</h3>
+              <span>Issuing Platform · Year</span>
             </div>
+          </div>
+          <div class="cert-card">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <div>
+              <h3>Certification Title</h3>
+              <span>Issuing Platform · Year</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="education-section" id="education">
+        <div class="section-head">
+          <p class="eyebrow">Education</p>
+          <h2>Academic Background.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>B.Tech, Information Technology</h3>
+            <span>Final Year</span>
+            <ul>
+              <li>Core coursework in Data Structures, Algorithms, DBMS, Operating Systems, and Computer Networks.</li>
+              <li>Academic and self-directed projects in data science, machine learning, and web development.</li>
+            </ul>
           </article>
-        </a>
-        <a href="https://github.com/ratneshvandanatiwari21-boop/disease_pred" target="_blank">
-          <article class="project-card">
-            <div class="project-top">
-              <span class="project-number">03</span>
-              <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+      </section>
+
+      <!-- Edit these to match questions you actually get asked -->
+      <section class="faq-section" id="faq">
+        <div class="section-head">
+          <p class="eyebrow">Quick Answers</p>
+          <h2>Before you reach out.</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What kind of roles are you looking for?
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Entry-level Data Analyst, Data Science, or Machine Learning roles, plus internships where I can keep building on real datasets.</p>
             </div>
-            <h3>Disease Prediction System</h3>
-            <p>Predicts possible diseases from user symptoms using Machine Learning.</p>
-            <div class="tag-list">
-              <span>Python</span>
-              <span>ML</span>
-              <span>Streamlit</span>
-              <span>Scikit-learn</span>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Are you open to remote or relocation?
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes to both — happy to work remotely or relocate for the right opportunity.</p>
             </div>
-          </article>
-        </a>
-      </div>
-    </section>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What's the fastest way to reach you?
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Email or the form below — I check both regularly and usually reply within a day or two.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <section class="contact-section" id="contact">
       <div class="contact-grid">
@@ -234,38 +459,51 @@
             <p class="lead">Send a message from the form. It will be saved in the Django admin so you can review every enquiry.</p>
           </div>
           <div class="contact-details">
-            <a class="contact-detail" href="mailto:ratneshvandanatiwari21@gmail.com">
-              <i class="fa-solid fa-envelope"></i>
-              <span>ratneshvandanatiwari21@gmail.com</span>
-            </a>
+            <div class="copy-email-row">
+              <a class="contact-detail" href="mailto:ratneshvandanatiwari21@gmail.com">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>ratneshvandanatiwari21@gmail.com</span>
+              </a>
+              <button class="btn btn-ghost" id="copyEmailBtn" type="button" aria-label="Copy email address to clipboard">
+                <i class="fa-solid fa-copy" aria-hidden="true"></i> Copy
+              </button>
+            </div>
             <a class="contact-detail" href="tel:+919336935310">
-              <i class="fa-solid fa-phone"></i>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               <span>+91 9336935310</span>
             </a>
             <div class="contact-detail">
-              <i class="fa-solid fa-location-dot"></i>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
               <span>Ayodhya, Uttar Pradesh</span>
+            </div>
+            <div class="contact-detail social-links">
+              <a href="https://github.com/ratneshvandanatiwari21-boop" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
 
         <div class="contact-card">
           {% if messages %}
-            <div class="messages">
+            <div class="messages" role="status" aria-live="polite">
               {% for message in messages %}
                 <div class="message {{ message.tags }}">{{ message }}</div>
               {% endfor %}
             </div>
           {% endif %}
-          <form class="form-grid" method="post" action="#contact">
+          <form class="form-grid" method="post" action="#contact" novalidate id="contactForm">
             {% csrf_token %}
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
             <div class="form-row">
               <label>Name<input type="text" name="name" placeholder="Your name" value="{{ form_values.name|default:'' }}" required /></label>
               <label>Email<input type="email" name="email" placeholder="you@example.com" value="{{ form_values.email|default:'' }}" required /></label>
             </div>
             <label>Subject<input type="text" name="subject" placeholder="What should we talk about?" value="{{ form_values.subject|default:'' }}" required /></label>
             <label>Message<textarea name="message" rows="6" placeholder="Write your message here..." required>{{ form_values.message|default:'' }}</textarea></label>
-            <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+            <button class="btn btn-primary" type="submit" id="submitBtn"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message</button>
           </form>
         </div>
       </div>
@@ -280,12 +518,23 @@
         <a href="#contact">Contact</a>
       </div>
     </footer>
+
+    <button id="back-to-top" aria-label="Back to top" title="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+      <span id="toastText">Copied!</span>
+    </div>
+
     <script>
       const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-      const revealItems = document.querySelectorAll('.section-head, .about-photo, .about-point, .skill-card, .timeline-item, .project-card, .contact-detail, .contact-card')
-      
+
+      /* ---------- Reveal-on-scroll ---------- */
+      const revealItems = document.querySelectorAll('.section-head, .about-photo, .about-point, .skill-card, .process-step, .timeline-item, .project-card, .cert-card, .faq-item, .contact-detail, .contact-card')
       revealItems.forEach((item) => item.classList.add('reveal'))
-      
+
       if (motionQuery.matches || !('IntersectionObserver' in window)) {
         revealItems.forEach((item) => item.classList.add('is-visible'))
       } else {
@@ -299,9 +548,334 @@
           },
           { threshold: 0.14 }
         )
-      
         revealItems.forEach((item) => revealObserver.observe(item))
       }
+
+      /* ---------- Scrollspy ---------- */
+      const navLinks = document.querySelectorAll('.nav-links a')
+      const sections = document.querySelectorAll('section[id]')
+      if ('IntersectionObserver' in window && sections.length && navLinks.length) {
+        const spy = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`)
+              if (!link) return
+              if (entry.isIntersecting) {
+                navLinks.forEach((l) => l.classList.remove('active'))
+                link.classList.add('active')
+              }
+            })
+          },
+          { rootMargin: '-40% 0px -50% 0px' }
+        )
+        sections.forEach((s) => spy.observe(s))
+      }
+
+      const navToggle = document.getElementById('nav-toggle')
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          if (navToggle) navToggle.checked = false
+        })
+      })
+
+      /* ---------- Scroll: progress bar, back-to-top, navbar shadow, cursor glow ---------- */
+      const backToTop = document.getElementById('back-to-top')
+      const navbarEl = document.querySelector('.navbar')
+      const progressEl = document.getElementById('scrollProgress')
+      let scrollTicking = false
+
+      function onScrollFrame() {
+        const y = window.scrollY
+        const max = document.documentElement.scrollHeight - window.innerHeight
+        if (progressEl) progressEl.style.width = (max > 0 ? (y / max) * 100 : 0) + '%'
+        if (backToTop) backToTop.classList.toggle('visible', y > 500)
+        if (navbarEl) navbarEl.classList.toggle('is-scrolled', y > 8)
+        scrollTicking = false
+      }
+
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (!scrollTicking) {
+            requestAnimationFrame(onScrollFrame)
+            scrollTicking = true
+          }
+        },
+        { passive: true }
+      )
+
+      if (backToTop) {
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: motionQuery.matches ? 'auto' : 'smooth' })
+        })
+      }
+
+      const heroEl = document.querySelector('.hero')
+      if (heroEl && !motionQuery.matches && matchMedia('(hover: hover)').matches) {
+        heroEl.addEventListener('pointermove', (e) => {
+          const rect = heroEl.getBoundingClientRect()
+          heroEl.style.setProperty('--x', `${e.clientX - rect.left}px`)
+          heroEl.style.setProperty('--y', `${e.clientY - rect.top}px`)
+        })
+      }
+
+      /* ---------- Theme toggle ---------- */
+      const themeToggle = document.getElementById('themeToggle')
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'dark'
+      }
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme)
+        try { localStorage.setItem('theme', theme) } catch (e) {}
+        if (themeToggle) themeToggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false')
+      }
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-pressed', currentTheme() === 'light' ? 'true' : 'false')
+        themeToggle.addEventListener('click', () => {
+          setTheme(currentTheme() === 'light' ? 'dark' : 'light')
+        })
+      }
+
+      /* ---------- Toast helper ---------- */
+      const toastEl = document.getElementById('toast')
+      const toastText = document.getElementById('toastText')
+      let toastTimer = null
+      function showToast(text) {
+        if (!toastEl) return
+        toastText.textContent = text
+        toastEl.classList.add('visible')
+        clearTimeout(toastTimer)
+        toastTimer = setTimeout(() => toastEl.classList.remove('visible'), 2200)
+      }
+
+      /* ---------- Copy email ---------- */
+      const copyEmailBtn = document.getElementById('copyEmailBtn')
+      if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', async () => {
+          const email = 'ratneshvandanatiwari21@gmail.com'
+          try {
+            await navigator.clipboard.writeText(email)
+            copyEmailBtn.classList.add('copied')
+            showToast('Email copied to clipboard')
+            setTimeout(() => copyEmailBtn.classList.remove('copied'), 1800)
+          } catch (e) {
+            showToast('Could not copy — email: ' + email)
+          }
+        })
+      }
+
+      /* ---------- Rotating role line ---------- */
+      ;(function roleCycle() {
+        const el = document.getElementById('roleCycle')
+        if (!el) return
+        const roles = ['Data Analyst', 'ML Practitioner', 'Dashboard Builder', 'Django Developer']
+        if (motionQuery.matches) return
+        let i = 0
+        setInterval(() => {
+          i = (i + 1) % roles.length
+          el.style.opacity = 0
+          setTimeout(() => {
+            el.textContent = roles[i]
+            el.style.opacity = 1
+          }, 250)
+        }, 2600)
+        el.style.transition = 'opacity 0.25s ease'
+      })()
+
+      /* ---------- Count-up stats ---------- */
+      ;(function countUp() {
+        const stats = document.querySelectorAll('.stat strong[data-count]')
+        if (!stats.length) return
+        function run(el) {
+          const target = parseInt(el.getAttribute('data-count'), 10) || 0
+          const suffix = el.getAttribute('data-suffix') || ''
+          if (motionQuery.matches) {
+            el.textContent = target + suffix
+            return
+          }
+          const duration = 1200
+          const start = performance.now()
+          function step(now) {
+            const progress = Math.min((now - start) / duration, 1)
+            el.textContent = Math.round(target * progress) + suffix
+            if (progress < 1) requestAnimationFrame(step)
+          }
+          requestAnimationFrame(step)
+        }
+        if ('IntersectionObserver' in window) {
+          const obs = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return
+              run(entry.target)
+              observer.unobserve(entry.target)
+            })
+          }, { threshold: 0.6 })
+          stats.forEach((s) => obs.observe(s))
+        } else {
+          stats.forEach(run)
+        }
+      })()
+
+      /* ---------- Project filter tabs ---------- */
+      ;(function projectFilter() {
+        const tabs = document.querySelectorAll('.filter-tab')
+        const cards = document.querySelectorAll('.projects-grid > a')
+        if (!tabs.length || !cards.length) return
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            tabs.forEach((t) => {
+              t.classList.remove('active')
+              t.setAttribute('aria-selected', 'false')
+            })
+            tab.classList.add('active')
+            tab.setAttribute('aria-selected', 'true')
+            const filter = tab.getAttribute('data-filter')
+            cards.forEach((card) => {
+              const match = filter === 'all' || card.getAttribute('data-category') === filter
+              card.classList.toggle('is-hidden', !match)
+            })
+          })
+        })
+      })()
+
+      /* ---------- FAQ accordion ---------- */
+      ;(function faq() {
+        document.querySelectorAll('.faq-item').forEach((item) => {
+          const question = item.querySelector('.faq-question')
+          question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('is-open')
+            document.querySelectorAll('.faq-item.is-open').forEach((open) => {
+              open.classList.remove('is-open')
+              open.querySelector('.faq-question').setAttribute('aria-expanded', 'false')
+            })
+            if (!isOpen) {
+              item.classList.add('is-open')
+              question.setAttribute('aria-expanded', 'true')
+            }
+          })
+        })
+      })()
+
+      /* ---------- Contact form: disable button on submit to avoid double-posts ---------- */
+      const contactForm = document.getElementById('contactForm')
+      const submitBtn = document.getElementById('submitBtn')
+      if (contactForm && submitBtn) {
+        contactForm.addEventListener('submit', () => {
+          submitBtn.setAttribute('disabled', 'true')
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...'
+        })
+      }
+
+      /* =========================================================
+         Hero chart — devicePixelRatio-aware canvas render.
+         ========================================================= */
+      ;(function heroChart() {
+        const canvas = document.getElementById('heroChart')
+        if (!canvas || !canvas.getContext) return
+        const ctx = canvas.getContext('2d')
+
+        const points = [
+          [0.06, 0.78], [0.14, 0.62], [0.19, 0.7], [0.27, 0.5],
+          [0.33, 0.58], [0.41, 0.4], [0.47, 0.46], [0.55, 0.3],
+          [0.6, 0.36], [0.68, 0.22], [0.75, 0.28], [0.83, 0.14],
+          [0.9, 0.2], [0.95, 0.1]
+        ]
+
+        let dpr = Math.max(window.devicePixelRatio || 1, 1)
+        let cssWidth = 0
+        let cssHeight = 0
+        let frame = null
+
+        function sizeCanvas() {
+          const rect = canvas.getBoundingClientRect()
+          cssWidth = rect.width
+          cssHeight = rect.height
+          dpr = Math.max(window.devicePixelRatio || 1, 1)
+          canvas.width = Math.round(cssWidth * dpr)
+          canvas.height = Math.round(cssHeight * dpr)
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+        }
+
+        function draw(progress) {
+          ctx.clearRect(0, 0, cssWidth, cssHeight)
+          const padX = 18
+          const padY = 16
+          const w = cssWidth - padX * 2
+          const h = cssHeight - padY * 2
+          const styles = getComputedStyle(document.documentElement)
+          const gridColor = styles.getPropertyValue('--grid-line').trim() || 'rgba(231,236,243,0.06)'
+          const plotColor = styles.getPropertyValue('--plot').trim() || '#2fd1a8'
+          const accentColor = styles.getPropertyValue('--accent').trim() || '#f2a93b'
+
+          ctx.strokeStyle = gridColor
+          ctx.lineWidth = 1
+          ctx.beginPath()
+          ctx.moveTo(padX, padY)
+          ctx.lineTo(padX, cssHeight - padY)
+          ctx.lineTo(cssWidth - padX, cssHeight - padY)
+          ctx.stroke()
+
+          ctx.fillStyle = plotColor
+          points.forEach(([px, py]) => {
+            const x = padX + px * w
+            const y = padY + py * h
+            ctx.beginPath()
+            ctx.arc(x, y, 3, 0, Math.PI * 2)
+            ctx.fill()
+          })
+
+          const x0 = padX
+          const y0 = padY + 0.82 * h
+          const x1 = cssWidth - padX
+          const y1 = padY + 0.08 * h
+          const cx = x0 + (x1 - x0) * progress
+          const cy = y0 + (y1 - y0) * progress
+
+          ctx.strokeStyle = accentColor
+          ctx.lineWidth = 2.5
+          ctx.lineCap = 'round'
+          ctx.beginPath()
+          ctx.moveTo(x0, y0)
+          ctx.lineTo(cx, cy)
+          ctx.stroke()
+        }
+
+        function animate(duration) {
+          if (frame) cancelAnimationFrame(frame)
+          const start = performance.now()
+          function step(now) {
+            const progress = Math.min((now - start) / duration, 1)
+            draw(progress)
+            if (progress < 1) frame = requestAnimationFrame(step)
+          }
+          frame = requestAnimationFrame(step)
+        }
+
+        function renderStatic() { draw(1) }
+
+        sizeCanvas()
+        if (motionQuery.matches) {
+          renderStatic()
+        } else {
+          animate(1100)
+        }
+
+        // Redraw when the theme changes (colors) or the window resizes
+        let resizeTimer = null
+        function scheduleResize() {
+          clearTimeout(resizeTimer)
+          resizeTimer = setTimeout(() => {
+            sizeCanvas()
+            renderStatic()
+          }, 120)
+        }
+        window.addEventListener('resize', scheduleResize)
+        window.addEventListener('orientationchange', scheduleResize)
+
+        if (themeToggle) {
+          themeToggle.addEventListener('click', () => setTimeout(renderStatic, 60))
+        }
+      })()
     </script>
   </body>
 </html>
