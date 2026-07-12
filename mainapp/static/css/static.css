@@ -2084,3 +2084,45 @@ a.contact-detail:hover {
     max-width: 1280px;
   }
 }
+
+/* Mobile */
+@media (max-width:768px){
+
+    .nav-links{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 30px;
+        transition: .4s ease;
+        z-index: 9999;
+    }
+
+    .nav-links.active{
+        left: 0;
+    }
+
+    .hero{
+        position: relative;
+        z-index: 1;
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 10000;
+    }
+
+    body{
+        padding-top: 80px;
+    }
+}
