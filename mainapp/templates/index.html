@@ -96,9 +96,7 @@
             <a href="#contact">Contact</a>
           </div>
 
-          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark theme" aria-pressed="false">
-            <span class="knob"><i class="fa-solid fa-sun" aria-hidden="true"></i><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
-          </button>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark theme" aria-pressed="false"><span class="knob"><i class="fa-solid fa-sun" aria-hidden="true"></i><i class="fa-solid fa-moon" aria-hidden="true"></i></span></button>
 
           <label class="menu-button" for="nav-toggle" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></label>
         </div>
@@ -106,15 +104,17 @@
 
       <div class="hero-content">
         <div class="hero-copy">
-          <p class="availability-badge"><span class="dot" aria-hidden="true"></span> Open to Data Analyst & ML internship/full-time roles</p>
-          <p class="role-line">Right now, thinking like a: <span class="role-cycle" id="roleCycle">Data Analyst</span></p>
+          <p class="availability-badge">
+            <span class="dot" aria-hidden="true"></span> Open to Data Analyst & ML internship/full-time roles
+          </p>
+          <p class="role-line">
+            Right now, thinking like a: <span class="role-cycle" id="roleCycle">Data Analyst</span>
+          </p>
           <h1>Turning raw data into clear decisions.</h1>
           <p class="hero-text">I am a final-year B.Tech IT student focused on data science, analytics, machine learning, and dashboard development. I build clean datasets, predictive models, and simple reporting experiences that help teams understand what to do next.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-arrow-right"></i> View Projects</a>
-            <a class="btn btn-secondary" href="{% static 'files/Ratnesh CV.pdf' %}" download>
-              <i class="fa-solid fa-download"></i> Download CV
-            </a>
+            <a class="btn btn-secondary" href="{% static 'files/Ratnesh CV.pdf' %}" download><i class="fa-solid fa-download"></i> Download CV</a>
           </div>
         </div>
 
@@ -362,36 +362,33 @@
         </div>
       </section>
 
-      <!-- TODO: replace these three placeholders with your real certifications
-           (name, issuing platform, year) before publishing — keep only genuine ones. -->
+      <!--     TODO: replace these three placeholders with your real certifications
+           (name, issuing platform, year) before publishing — keep only genuine ones.     -->
       <section class="cert-section" id="certifications">
         <div class="section-head">
           <p class="eyebrow">Certifications</p>
-          <h2>Add your real credentials here.</h2>
-          <p class="lead">Swap these placeholder cards for certificates you've actually earned.</p>
+          <h2>Certifications & Training</h2>
+          <p class="lead">Professional certifications and training completed during my academic journey.</p>
         </div>
+
         <div class="cert-grid">
-          <div class="cert-card">
-            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+          <!-- College Certificate -->
+          <a href="YOUR_DRIVE_LINK_1" target="_blank" class="cert-card">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
             <div>
-              <h3>Certification Title</h3>
-              <span>Issuing Platform · Year</span>
+              <h3>B.Tech Degree (Expected)</h3>
+              <span>IET Dr. Rammanohar Lohia Avadh University, Ayodhya · 2026</span>
             </div>
-          </div>
-          <div class="cert-card">
-            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+          </a>
+
+          <!-- Training Certificate -->
+          <a href="YOUR_DRIVE_LINK_2" target="_blank" class="cert-card">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
             <div>
-              <h3>Certification Title</h3>
-              <span>Issuing Platform · Year</span>
+              <h3>Data Science Training</h3>
+              <span>Softpro India · 2026</span>
             </div>
-          </div>
-          <div class="cert-card">
-            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-            <div>
-              <h3>Certification Title</h3>
-              <span>Issuing Platform · Year</span>
-            </div>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -403,10 +400,17 @@
         <div class="timeline">
           <article class="timeline-item">
             <h3>B.Tech, Information Technology</h3>
-            <span>Final Year</span>
+
+            <h3><i class="fa-solid fa-building-columns"></i> IET Dr. Rammanohar Lohia Avadh University, Ayodhya</h3>
+
+            <span><i class="fa-solid fa-calendar"></i> Final Year</span>
+
             <ul>
               <li>Core coursework in Data Structures, Algorithms, DBMS, Operating Systems, and Computer Networks.</li>
               <li>Academic and self-directed projects in data science, machine learning, and web development.</li>
+              <li>Developed a strong foundation in software engineering principles and problem-solving techniques.</li>
+              <li>Completed practical laboratory work and technical assignments across core Information Technology subjects.</li>
+              <li>Participated in seminars, presentations, and collaborative academic activities to enhance technical and communication skills.</li>
             </ul>
           </article>
         </div>
@@ -464,9 +468,7 @@
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 <span>ratneshvandanatiwari21@gmail.com</span>
               </a>
-              <button class="btn btn-ghost" id="copyEmailBtn" type="button" aria-label="Copy email address to clipboard">
-                <i class="fa-solid fa-copy" aria-hidden="true"></i> Copy
-              </button>
+              <button class="btn btn-ghost" id="copyEmailBtn" type="button" aria-label="Copy email address to clipboard"><i class="fa-solid fa-copy" aria-hidden="true"></i> Copy</button>
             </div>
             <a class="contact-detail" href="tel:+919336935310">
               <i class="fa-solid fa-phone" aria-hidden="true"></i>
@@ -519,9 +521,7 @@
       </div>
     </footer>
 
-    <button id="back-to-top" aria-label="Back to top" title="Back to top">
-      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-    </button>
+    <button id="back-to-top" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
 
     <div class="toast" id="toast" role="status" aria-live="polite">
       <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
@@ -530,6 +530,54 @@
 
     <script>
       const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+      /* ---------- Button click ripple ---------- */
+      document.querySelectorAll('.btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          if (motionQuery.matches) return
+          const rect = btn.getBoundingClientRect()
+          const size = Math.max(rect.width, rect.height)
+          const ripple = document.createElement('span')
+          ripple.className = 'ripple'
+          ripple.style.width = ripple.style.height = size + 'px'
+          ripple.style.left = (e.clientX - rect.left - size / 2) + 'px'
+          ripple.style.top = (e.clientY - rect.top - size / 2) + 'px'
+          btn.appendChild(ripple)
+          ripple.addEventListener('animationend', () => ripple.remove())
+        })
+      })
+
+      /* ---------- Magnetic buttons: nudge slightly toward the cursor ---------- */
+      if (matchMedia('(hover: hover)').matches && !motionQuery.matches) {
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach((btn) => {
+          btn.addEventListener('pointermove', (e) => {
+            const rect = btn.getBoundingClientRect()
+            const x = (e.clientX - rect.left - rect.width / 2) * 0.25
+            const y = (e.clientY - rect.top - rect.height / 2) * 0.25
+            btn.style.transform = `translate(${x.toFixed(1)}px, ${(y - 2).toFixed(1)}px)`
+          })
+          btn.addEventListener('pointerleave', () => {
+            btn.style.transform = ''
+          })
+        })
+      }
+
+      /* ---------- Tilt for project cards (pointer devices only) ---------- */
+      if (matchMedia('(hover: hover)').matches && !motionQuery.matches) {
+        document.querySelectorAll('.project-card').forEach((card) => {
+          card.style.transformStyle = 'preserve-3d'
+          card.style.willChange = 'transform'
+          card.addEventListener('pointermove', (e) => {
+            const rect = card.getBoundingClientRect()
+            const px = (e.clientX - rect.left) / rect.width - 0.5
+            const py = (e.clientY - rect.top) / rect.height - 0.5
+            card.style.transform = `perspective(700px) rotateX(${(-py * 6).toFixed(2)}deg) rotateY(${(px * 6).toFixed(2)}deg) translateY(-5px)`
+          })
+          card.addEventListener('pointerleave', () => {
+            card.style.transform = ''
+          })
+        })
+      }
 
       /* ---------- Reveal-on-scroll ---------- */
       const revealItems = document.querySelectorAll('.section-head, .about-photo, .about-point, .skill-card, .process-step, .timeline-item, .project-card, .cert-card, .faq-item, .contact-detail, .contact-card')
@@ -578,10 +626,11 @@
         })
       })
 
-      /* ---------- Scroll: progress bar, back-to-top, navbar shadow, cursor glow ---------- */
+      /* ---------- Scroll: progress bar, back-to-top, navbar shadow, cursor glow, parallax ---------- */
       const backToTop = document.getElementById('back-to-top')
       const navbarEl = document.querySelector('.navbar')
       const progressEl = document.getElementById('scrollProgress')
+      const heroVideoEl = document.querySelector('.hero-video')
       let scrollTicking = false
 
       function onScrollFrame() {
@@ -590,6 +639,11 @@
         if (progressEl) progressEl.style.width = (max > 0 ? (y / max) * 100 : 0) + '%'
         if (backToTop) backToTop.classList.toggle('visible', y > 500)
         if (navbarEl) navbarEl.classList.toggle('is-scrolled', y > 8)
+        // Gentle parallax: video drifts slower than the page, only
+        // while the hero is still roughly in view
+        if (heroVideoEl && !motionQuery.matches && y < window.innerHeight) {
+          heroVideoEl.style.transform = `translateY(${y * 0.15}px) scale(1.12)`
+        }
         scrollTicking = false
       }
 
@@ -721,6 +775,26 @@
         const tabs = document.querySelectorAll('.filter-tab')
         const cards = document.querySelectorAll('.projects-grid > a')
         if (!tabs.length || !cards.length) return
+
+        function applyFilter(filter) {
+          cards.forEach((card) => {
+            const match = filter === 'all' || card.getAttribute('data-category') === filter
+            clearTimeout(card._filterTimer)
+            if (match) {
+              card.classList.remove('is-hidden')
+              // Next frame so the browser registers the display change
+              // before removing is-fading-out — otherwise there's
+              // nothing to transition from and it just snaps in.
+              requestAnimationFrame(() => {
+                requestAnimationFrame(() => card.classList.remove('is-fading-out'))
+              })
+            } else {
+              card.classList.add('is-fading-out')
+              card._filterTimer = setTimeout(() => card.classList.add('is-hidden'), motionQuery.matches ? 0 : 260)
+            }
+          })
+        }
+
         tabs.forEach((tab) => {
           tab.addEventListener('click', () => {
             tabs.forEach((t) => {
@@ -729,29 +803,33 @@
             })
             tab.classList.add('active')
             tab.setAttribute('aria-selected', 'true')
-            const filter = tab.getAttribute('data-filter')
-            cards.forEach((card) => {
-              const match = filter === 'all' || card.getAttribute('data-category') === filter
-              card.classList.toggle('is-hidden', !match)
-            })
+            applyFilter(tab.getAttribute('data-filter'))
           })
         })
       })()
 
       /* ---------- FAQ accordion ---------- */
       ;(function faq() {
+        function closeItem(item) {
+          const answer = item.querySelector('.faq-answer')
+          item.classList.remove('is-open')
+          item.querySelector('.faq-question').setAttribute('aria-expanded', 'false')
+          answer.style.maxHeight = '0px'
+        }
+        function openItem(item) {
+          const answer = item.querySelector('.faq-answer')
+          item.classList.add('is-open')
+          item.querySelector('.faq-question').setAttribute('aria-expanded', 'true')
+          // Measure actual content height rather than guessing a fixed
+          // cap — stays correct however long the answer or font size is.
+          answer.style.maxHeight = answer.scrollHeight + 'px'
+        }
         document.querySelectorAll('.faq-item').forEach((item) => {
           const question = item.querySelector('.faq-question')
           question.addEventListener('click', () => {
             const isOpen = item.classList.contains('is-open')
-            document.querySelectorAll('.faq-item.is-open').forEach((open) => {
-              open.classList.remove('is-open')
-              open.querySelector('.faq-question').setAttribute('aria-expanded', 'false')
-            })
-            if (!isOpen) {
-              item.classList.add('is-open')
-              question.setAttribute('aria-expanded', 'true')
-            }
+            document.querySelectorAll('.faq-item.is-open').forEach(closeItem)
+            if (!isOpen) openItem(item)
           })
         })
       })()
